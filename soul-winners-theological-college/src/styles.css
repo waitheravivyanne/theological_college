@@ -5,12 +5,12 @@ body {
     padding: 0;
   }
   
-  .hero {
+  /* .hero {
     background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
     text-align: center;
-  }
+  } */
   
   .mission-vision, .programs, .contact {
     padding: 50px 20px;

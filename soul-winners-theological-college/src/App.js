@@ -1,17 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MissionVision from './components/MissionVision';
 import Programs from './components/Programs';
-import About from './components/About';
-import Contact from './components/Contact';
+// import About from './components/About';
+import Contacts from './components/Contacts';
 import Footer from './components/Footer';
+import './styles.css';
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
+    <>
+      <Navbar /> {/* Navbar should be outside Routes */}
+
       <Routes>
         <Route path="/" element={
           <>
@@ -20,12 +22,13 @@ const App = () => {
             <Programs />
           </>
         } />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/programs" element={<Programs />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
-      <Footer />
-    </Router>
+
+      <Footer /> {/* Footer should be outside Routes */}
+    </>
   );
 };
 
