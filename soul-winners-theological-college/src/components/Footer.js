@@ -4,7 +4,9 @@ const Footer = () => {
   return (
     <footer>
       <p>&copy; 2023 Christian Soul Winners Theological College</p>
-      <p>Email: soulwinnersintl@gmail.com</p>
+      {/* <p>Email: soulwinnersintl@gmail.com</p> */}
+      <p>Email: vivyannexeirah@gmail.com</p>
+
     </footer>
   );
 };

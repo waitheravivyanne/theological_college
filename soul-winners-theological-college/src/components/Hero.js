@@ -1,11 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMore = () => {
+    navigate('/programs'); // Redirect to the Programs page
+  };
+
   return (
     <section className="hero">
       <div className="hero-content">
         <h1>Prepare Servants of God to Reach the Nations</h1>
         <p>Equipping leaders for global ministry since 2014.</p>
+        <button className="cta-button" onClick={handleLearnMore}>
+          Learn More
+        </button>
       </div>
     </section>
   );
