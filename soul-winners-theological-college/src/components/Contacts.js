@@ -1,63 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Contacts = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
-
-    try {
-      const response = await fetch('http://localhost:5000/send-message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setPopupMessage('Your message has been delivered!');
-        setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 3000);
-      } else {
-        setPopupMessage('Failed to send message. Please try again.');
-        setShowPopup(true);
-        setTimeout(() => setShowPopup(false), 3000);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setPopupMessage('An error occurred. Please try again.');
-      setShowPopup(true);
-      setTimeout(() => setShowPopup(false), 3000);
-    }
-  };
-
   return (
-    <section className="contact">
-      <h2>Contact Us</h2>
-      <p>Location: Nairobi, Kenya</p>
-      <p>Email: vivyannexeirah@gmail.com</p>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <div className="contacts-container">
+      <h1>Contact Us</h1>
+      <p>If you have any questions or need further information, feel free to reach out to us.</p>
 
-      {/* Pop-up for success/error message */}
-      {showPopup && (
-        <div className="popup">
-          <p>{popupMessage}</p>
-        </div>
-      )}
-    </section>
+      <div className="contact-info">
+        <h2>Email</h2>
+        <p>
+          <a href="mailto:info@soulwinnersintl@gmail.com">
+            info@soulwinnersintl@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <div className="contact-info">
+        <h2>Phone</h2>
+        <p>+254.........</p>
+      </div>
+
+      <div className="contact-info">
+        <h2>Address</h2>
+        <p>Nairobi, Kenya</p>
+      </div>
+    </div>
   );
 };
 

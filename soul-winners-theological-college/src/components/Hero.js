@@ -5,7 +5,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleLearnMore = () => {
-    navigate('/programs'); // Redirect to the Programs page
+    navigate('/About'); 
   };
 
   return (
@@ -22,3 +22,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
