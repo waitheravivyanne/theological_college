@@ -15,27 +15,18 @@ import BackIcon from './components/BackIcon';
 const Home = () => {
   return (
     <>
-      <section className="introduction">
-        <h2>Welcome to Christian Soul Winners Theological College</h2>
-        <h3>
-          Foundation: "Christian Soul Winners Theological College was founded in 2014 with the purpose of serving the Body of Christ in preparing the servants of God to reach the nations with the gospel of the Lord Jesus Christ. We value quality and excellence and strive to see that we are obedient to God in reaching the nations."
-        </h3>
-      </section>
-
-      {/* Display image1 */}
       <div style={{ textAlign: 'center', margin: '20px 0' }}>
         <img
           src={image1}
-          alt="College Teachers during graduation" // Use descriptive alt text
+          alt="College Teachers during graduation"
           style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px' }}
         />
       </div>
 
-      {/* Display image2 */}
       <div style={{ textAlign: 'center', margin: '20px 0' }}>
         <img
           src={image2}
-          alt="Students Graduating" // Use descriptive alt text
+          alt="Students Graduating"
           style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px' }}
         />
       </div>
@@ -49,7 +40,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <BackIcon excludeRoutes={['/']} /> {/* Exclude back icon on the landing page */}
+      <BackIcon excludeRoutes={['/']} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hero" element={<Hero />} />

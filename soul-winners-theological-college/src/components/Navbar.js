@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/logo.png'; // Import your logo image
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <h1>Christian Soul Winners Theological College</h1>
+        <img src={logo} alt="Christian Soul Winners Theological College Logo" />
       </div>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
